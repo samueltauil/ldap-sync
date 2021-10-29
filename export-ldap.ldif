@@ -1,0 +1,100 @@
+dn: dc=example,dc=com
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+dc: example
+o: example
+
+dn: cn=admins,dc=example,dc=com
+ou: groups
+cn: admins
+objectClass: top
+objectClass: groupOfNames
+member: dc=example,dc=com
+
+dn: cn=developers,dc=example,dc=com
+ou: groups
+cn: developers
+objectClass: top
+objectClass: groupOfNames
+member: dc=example,dc=com
+
+dn: cn=users,dc=example,dc=com
+ou: groups
+cn: users
+objectClass: top
+objectClass: groupOfNames
+member: dc=example,dc=com
+
+dn: uid=admin1,cn=admins,dc=example,dc=com
+displayName: Admin User1
+uid: admin1
+ou: users
+cn: Admin
+sn: User1
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+userPassword: openshift
+
+dn: uid=admin2,cn=admins,dc=example,dc=com
+displayName: Admin User2
+uid: admin2
+ou: users
+cn: Admin
+sn: User2
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+userPassword: openshift
+
+dn: uid=developer1,cn=developers,dc=example,dc=com
+displayName: Developer User1
+uid: developer1
+ou: users
+cn: Developer
+sn: User1
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+userPassword: openshift
+
+dn: uid=developer2,cn=developers,dc=example,dc=com
+displayName: Developer User2
+uid: developer2
+ou: users
+cn: Developer
+sn: User2
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+userPassword: openshift
+
+dn: uid=user1,cn=users,dc=example,dc=com
+displayName: Regular User1
+uid: user1
+ou: users
+cn: Regular
+sn: User1
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+userPassword: openshift
+
+dn: uid=user2,cn=users,dc=example,dc=com
+displayName: Regular User2
+uid: user2
+ou: users
+cn: Regular
+sn: User2
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+userPassword: openshift
+

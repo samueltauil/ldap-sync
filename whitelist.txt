@@ -1,0 +1,2 @@
+CN=developers,DC=example,DC=com
+CN=admins,DC=example,DC=com

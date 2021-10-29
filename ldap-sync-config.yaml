@@ -1,0 +1,28 @@
+kind: LDAPSyncConfig
+apiVersion: v1
+url: ldap://172.16.0.85:30389
+bindDN: cn=Manager,dc=example,dc=com 
+bindPassword: admin
+insecure: true
+groupUIDNameMapping:
+  "CN=admins,DC=example,DC=com": Administrators
+  "CN=developers,DC=example,DC=com": Developers
+rfc2307:
+    groupsQuery:
+      baseDN: ""
+      scope: sub
+      derefAliases: never
+      filter: (ou=groups)
+    groupUIDAttribute: dn
+    groupNameAttributes: [ cn ]
+    groupMembershipAttributes: [ member ]
+    usersQuery:
+        baseDN: ""
+        scope: sub
+        derefAliases: never
+        filter: (ou=users)
+        pageSize: 0
+    userUIDAttribute: uid
+    userNameAttributes: [ uid ]
+    tolerateMemberNotFoundErrors: true
+    tolerateMemberOutOfScopeErrors: true
